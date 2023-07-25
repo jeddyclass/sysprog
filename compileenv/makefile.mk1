@@ -1,0 +1,11 @@
+myapp: main.o p2.o p3.o
+	gcc -o mymaketestapp main.o p2.o p3.o
+
+main.o: main.c a.h
+	gcc -c main.c
+
+p2.o: p2.c a.h b.h
+	gcc -c p2.c
+
+p3.o: p3.c b.h c.h
+	gcc -c p3.c
